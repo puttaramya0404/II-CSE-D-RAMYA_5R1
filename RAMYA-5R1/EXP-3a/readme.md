@@ -104,7 +104,7 @@ WHERE Hire_Date > TO_DATE('01-JAN-2020', 'DD-MON-YYYY');
 
 
 
-# 3.5)
+# 3.5)Write an SQL query to display the full name of each employee by concatenating the first name and last name using the concatenation (||) operator.
 ```
 SELECT First_Name || ' ' || Last_Name AS Full_Name
 FROM Employee;
@@ -113,7 +113,7 @@ FROM Employee;
 
 
 
-# 3.6)
+# 3.6)Write an SQL query to concatenate the first name and last name of each employee using the CONCAT function.
 
 ```
 SELECT CONCAT(First_Name, CONCAT(' ', Last_Name)) AS Full_Name
@@ -124,7 +124,7 @@ FROM Employee;
 
 
 
-# 3.7)
+# 3.7) Write an SQL query to display each employee's first name left-padded with * characters using the LPAD function.
 ```
 SELECT LPAD(First_Name, 10, '*') AS Padded_Name
 FROM Employee;
@@ -134,7 +134,7 @@ FROM Employee;
 
 
 
-# 3.8)
+# 3.8)Write an SQL query to display each employee's first name right-padded with * characters using the RPAD function.
 ```
 SELECT RPAD(First_Name, 10, '*') AS Padded_Name
 FROM Employee;
@@ -145,7 +145,7 @@ FROM Employee;
 
 
 
-# 3.9)
+# 3.9) Write an SQL query to remove leading spaces from employee names using the LTRIM function.
 ```
 SELECT LTRIM(First_Name)
 FROM Employee;
@@ -156,7 +156,7 @@ FROM Employee;
 
 
 
-# 3.10)
+# 3.10)Write an SQL query to remove trailing spaces from employee names using the RTRIM function.
 ```
 SELECT RTRIM(First_Name)
 FROM Employee;
@@ -166,7 +166,7 @@ FROM Employee;
 
 
 
-# 3.11)
+# 3.11)Display all employee first names in lowercase using LOWER
 ```
 SELECT LOWER(First_Name)
 FROM Employee;
@@ -176,7 +176,7 @@ FROM Employee;
 
 
 
-# 3.12)
+# 3.12) Write an SQL query to display all employee first names in uppercase using the UPPER function.
 ```
 SELECT UPPER(First_Name)
 FROM Employee;
@@ -186,7 +186,7 @@ FROM Employee;
 
 
 
-# 3.13)
+# 3.13)Write an SQL query to display employee first names in proper case using the INITCAP function.
 ```
 SELECT INITCAP(First_Name)
 FROM Employee;
@@ -197,7 +197,7 @@ FROM Employee;
 
 
 
-# 3.14)
+# 3.14)Write an SQL query to display the length of each employee's first name using the LENGTH function.
 ```
 SELECT LENGTH(First_Name)
 FROM Employee;
@@ -206,7 +206,7 @@ FROM Employee;
 
 
 
-# 3.15)
+# 3.15)Write an SQL query to display the first three characters of each employee's first name using the SUBSTR function.
 ```
 SELECT SUBSTR(First_Name, 1, 3)
 FROM Employee;
@@ -215,7 +215,7 @@ FROM Employee;
 
 
 
-# 3.16)
+# 3.16)Write an SQL query to find the position of the character 'a' in each employee's first name using the INSTR function.
 ```
 SELECT INSTR(First_Name, 'a')
 FROM Employee;
@@ -225,7 +225,7 @@ FROM Employee;
 
 
 
-# 3.17)
+# 3.17) Write an SQL query to display the current system date along with each employee's details using the SYSDATE function.
 ```
 SELECT Employee.*, SYSDATE AS Current_Date
 FROM Employee;
@@ -235,7 +235,7 @@ FROM Employee;
 
 
 
-# 3.18)
+# 3.18)Write an SQL query to display the next Monday after each employee's hire date using the NEXT_DAY function.
 ```
 SELECT NEXT_DAY(Hire_Date, 'MONDAY') AS Next_Monday
 FROM Employee;
@@ -245,7 +245,7 @@ FROM Employee;
 
 
 
-# 3.19)
+# 3.19)Write an SQL query to display the date obtained by adding six months to each employee's hire date using the ADD_MONTHS function.
 ```
 SELECT ADD_MONTHS(Hire_Date, 6) AS New_Date
 FROM Employee;
@@ -255,7 +255,7 @@ FROM Employee;
 
 
 
-# 3.20)
+# 3.20) Write an SQL query to display the last day of the month for each employee's hire date using the LAST_DAY function.
 ```
 SELECT LAST_DAY(Hire_Date) AS Last_Day
 FROM Employee;
@@ -265,7 +265,7 @@ FROM Employee;
 
 
 
-# 3.21)
+# 3.21)Write an SQL query to calculate the total number of months each employee has worked using the MONTHS_BETWEEN function.
 ```
 SELECT MONTHS_BETWEEN(SYSDATE,Hire_Date) AS Months_Worked
 FROM Employee;
@@ -275,7 +275,7 @@ FROM Employee;
 
 
 
-# 3.22)
+# 3.22)Write an SQL query to display the smaller value between each employee's salary and 60000 using the LEAST function.
 ```
 SELECT LEAST(Salary, 60000) AS Smaller_Value
 FROM Employee;
@@ -285,7 +285,7 @@ FROM Employee;
 
 
 
-# 3.23)
+# 3.23)Write an SQL query to display the greater value between each employee's salary and 60000 using the GREATEST function.
 ```
 SELECT GREATEST(Salary, 60000) AS Greater_Value
 FROM Employee;
@@ -295,7 +295,7 @@ FROM Employee;
 
 
 
-# 3.24)
+# 3.24) Write an SQL query to display the first day of the month of each employee's hire date using the TRUNC function.
 ```
 SELECT TRUNC(Hire_Date, 'MONTH') AS First_Day
 FROM Employee;
@@ -305,7 +305,7 @@ FROM Employee;
 
 
 
-# 3.25)
+# 3.25)Write an SQL query to round each employee's hire date to the nearest month using the ROUND function.
 ```
 SELECT ROUND(Hire_Date, 'MONTH') AS Rounded_Date
 FROM Employee;
@@ -315,7 +315,7 @@ FROM Employee;
 
 
 
-# 3.26)
+# 3.26)Write an SQL query to display each employee's hire date in the format DAY, DD-MON-YYYY using the TO_CHAR function.
 ```
 SELECT TO_CHAR(Hire_Date, 'DAY, DD-MON-YYYY') AS Hire_Date
 FROM Employee;
@@ -325,7 +325,7 @@ FROM Employee;
 
 
 
-# 3.27)
+# 3.27)Write an SQL query to display the details of employees who were hired before 01-JAN-2019 using the TO_DATE function.
 ```
 SELECT *
 FROM Employee
